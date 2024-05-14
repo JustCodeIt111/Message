@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> 
+</head>
+
+<body class="scissors">
+  <audio id="background-audio" src="With You - Ronan Keating Lyrics (320 kbps).mp3" loop></audio>
+  <div class="envelop">
+    <div class="envelop__front-paper"></div>
+    <div class="envelop__back-paper"></div>
+    <div class="envelop__up-paper js-up-paper"></div>
+    <div class="envelop__sticker js-sticker"></div>
+    <div class="envelop__false-sticker"></div>
+    <div class="envelop__content js-envelop-content">
+      <div class="love-notes">
+        <div class="note js-note">
+          <div class="note__text">
+            <p>Please remember that I will always be here for you. Through the good times and the bad, I will stand beside you, holding your hand and supporting you in any way that I can.
+            </p>
+          </div>
+        </div>
+        <div class="note js-note">
+          <div class="note__text">
+            <p>Know that together we are stronger than anything the world can throw at us. Your hard work and dedication do not go unnoticed, my love. I appreciate all that you do, and I am endlessly proud of the person you are.</p>
+          </div>
+        </div>
+        <div class="note js-note">
+          <div class="note__text">
+            <p>So let us stay strong together, my love. Let us face whatever challenges may come our way with courage and determination, knowing that as long as we have each other, we can conquer anything.</p>
+            <p>Te dua Ana ime &hearts;.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var audio = document.getElementById("background-audio");
+        audio.play().catch(function(error) {
+            console.log("Autoplay was prevented:", error);
+            // Autoplay was prevented. Show a play button to let the user start the audio manually.
+        });
+    });
+
+    // Add a click event listener to start audio playback on user interaction
+    window.addEventListener("click", function() {
+        var audio = document.getElementById("background-audio");
+        if (audio.paused) {
+            audio.play().catch(function(error) {
+                console.log("Autoplay was prevented:", error);
+                // Autoplay was prevented. Show a play button to let the user start the audio manually.
+            });
+        }
+    });
+  </script>
+</body>
+</html>
